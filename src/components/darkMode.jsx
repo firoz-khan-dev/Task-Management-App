@@ -12,7 +12,7 @@ function DarkMode() {
   }, [darkMode]);
 
   return (
-    <div className="absolute top-3 left-18">
+    <div className="absolute top-3 left-3 sm:left-18">
         <button onClick={() =>setDarkMode(darkMode === "dark" ? "light" : "dark")}
         className={`relative w-16 h-8 rounded-full p-1 transition-colors duration-300 cursor-pointer
           ${darkMode === "dark" ? "bg-gray-700" : "bg-gray-300"}`}>

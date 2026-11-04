@@ -24,7 +24,7 @@ function DateCalender() {
 
   return (
     <div>
-      <div className='flex gap-2 mt-5 ml-180'>
+      <div className='flex gap-2 mt-5 ml-0 lg:ml-180 px-2 overflow-x-auto'>
         {dates.map((date, index) => {
           const dayNum = date.getDate();           // jaise 8, 9, 10...
           const dayName = dayNames[date.getDay()]; // jaise Mon, Tue...
@@ -34,7 +34,7 @@ function DateCalender() {
             <div
               key={index}
               onClick={() => setSelectedDate(dayNum)}
-              className={`rounded h-30 w-20 border-2 flex flex-col items-center justify-center 
+              className={`rounded h-24 w-16 sm:h-30 sm:w-20 shrink-0 border-2 flex flex-col items-center justify-center 
                           cursor-pointer transition-colors duration-200
                           ${isSelected 
                             ? "bg-blue-500 text-white border-blue-500" 

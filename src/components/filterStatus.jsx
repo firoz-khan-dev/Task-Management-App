@@ -9,7 +9,7 @@ function FilterStatus() {
   const { statusTerm } = useSelector((state) => state.filter);
 
   return (
-    <div className="absolute right-5 top-18">
+    <div className="absolute right-2 sm:right-5 top-18">
       <div className="relative">
         <select
           value={statusTerm}

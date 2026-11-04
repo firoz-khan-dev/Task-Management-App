@@ -63,11 +63,11 @@ function Card() {
   }
 
   return (
-    <div className="flex flex-wrap gap-0 justify-center mt-12">
+    <div className="flex flex-wrap gap-0 justify-center mt-8 md:mt-12">
       {filterOut.map((item) => (
         <div
           key={item.id}
-          className="w-65 min-h-50 flex flex-col gap-2 text-center items-center justify-center over bg-red-200 rounded-2xl mx-5 mt-5 relative dark:bg-linear-to-br from-indigo-800 via-purple-400 to-indigo-950 hover:shadow-2xl dark:hover:shadow-cyan-900/90 transition-shadow duration-300 pt-8"
+          className="w-65 min-h-50 flex flex-col gap-2 text-center items-center justify-center over bg-red-200 rounded-2xl mx-2 sm:mx-5 mt-5 relative dark:bg-linear-to-br from-indigo-800 via-purple-400 to-indigo-950 hover:shadow-2xl dark:hover:shadow-cyan-900/90 transition-shadow duration-300 pt-8"
           onMouseEnter={() => setShow(item.id)}
           onMouseLeave={() => setShow(null)}
         >

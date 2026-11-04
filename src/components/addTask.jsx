@@ -76,10 +76,10 @@ function AddTask() {
   }
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-white dark:bg-white relative">
+    <div className="flex justify-center items-center min-h-screen bg-white dark:bg-white relative overflow-hidden">
       <form
         onSubmit={existingData ? handleUpdate : handleSubmit}
-        className="flex flex-col gap-8  w-100 h-130 justify-center items-center rounded-2xl "
+        className="relative z-10 flex flex-col gap-8 w-full max-w-100 h-130 justify-center items-center rounded-2xl px-4"
       >
         <div className="flex flex-col gap-1">
           <h1 className="text-5xl font-bold text-blue-950">Welcome</h1>
@@ -87,7 +87,7 @@ function AddTask() {
             Add Your Task
           </p>
         </div>
-        <div className="relative w-70">
+        <div className="relative w-full max-w-70">
           <input
             type="text"
             placeholder=" "
@@ -103,7 +103,7 @@ function AddTask() {
             Task Name
           </label>
         </div>
-        <div className="relative w-70">
+        <div className="relative w-full max-w-70">
           <input
             type="text"
             placeholder=" "
@@ -118,7 +118,7 @@ function AddTask() {
             Description (Optional)
           </label>
         </div>
-        <div className="relative w-70">
+        <div className="relative w-full max-w-70">
           <input
             type="date"
             required
@@ -133,7 +133,7 @@ function AddTask() {
             Choose Date
           </label>
         </div>
-        <div className="relative w-70">
+        <div className="relative w-full max-w-70">
           <select
             value={priority}
             onChange={(e) => setPriority(e.target.value)}
@@ -158,10 +158,10 @@ function AddTask() {
           {existingData ? "Update" : "Submit"}
         </button>
       </form>
-      <img src={tajmahal} alt="" color="blue-500"  className="absolute -bottom-28 -left-10 size-80  select-none"/>
-      <img src={flight} alt="" color="blue-500"  className="absolute  -top-4 h-60 -right-2 select-none"/>
-      <img src={delhi} alt="" color="blue-500"  className="absolute size-55 -right-5 -bottom-10 -rotate-13 select-none"/>
-      <img src={tower} alt="" color="blue-500"  className="absolute size-55 -right-22 -bottom-10 select-none "/>
+      <img src={tajmahal} alt="" className="absolute -bottom-12 sm:-bottom-28 -left-6 sm:-left-10 size-40 sm:size-80 select-none pointer-events-none"/>
+      <img src={flight} alt="" className="absolute top-0 right-0 h-24 sm:h-40 lg:h-52 w-auto max-w-[45%] object-contain select-none pointer-events-none"/>
+      <img src={delhi} alt="" className="absolute size-28 sm:size-55 -right-3 sm:-right-5 -bottom-6 sm:-bottom-10 -rotate-13 select-none pointer-events-none"/>
+      <img src={tower} alt="" className="absolute size-28 sm:size-55 -right-10 sm:-right-22 -bottom-6 sm:-bottom-10 select-none pointer-events-none"/>
     </div>
   );
 }
